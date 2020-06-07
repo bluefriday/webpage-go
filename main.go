@@ -30,9 +30,12 @@ func engine() *gin.Engine {
 	r.POST("/login", login)
 	r.GET("/", loginCheck)
 	r.GET("/logout", logout)
-
-	r.LoadHTMLGlob("templates/*")
 	r.GET("/test", test)
+
+	r.Static("dist", "./lib/dist")
+	r.Static("vendors", "./lib/vendors")
+	r.Static("image", "./resource/image")
+	r.LoadHTMLGlob("templates/*")
 
 	//로그인이 되었을때만 보이는 요청
 	private := r.Group("/private")
@@ -56,7 +59,7 @@ func AuthRequired(c *gin.Context) {
 }
 
 func test(c *gin.Context) {
-	c.HTML(http.StatusOK, "index.html", gin.H{
+	c.HTML(http.StatusOK, "welcome.html", gin.H{
 		"title": "Posts",
 	})
 }
@@ -75,7 +78,11 @@ func login(c *gin.Context) {
 
 	// Check for username and password match, usually from a database
 	if username != "hello" || password != "world" {
-		c.JSON(http.StatusUnauthorized, gin.H{"error": "Authentication failed"})
+		//c.JSON(http.StatusUnauthorized, gin.H{"error": "Authentication failed"})
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "id or password is not correct.",
+		})
 		return
 	}
 
@@ -87,7 +94,7 @@ func login(c *gin.Context) {
 	}
 
 	//c.JSON(http.StatusOK, gin.H{"message": "Successfully authenticated user"})
-	c.HTML(http.StatusOK, "index2.html", gin.H{
+	c.HTML(http.StatusOK, "home.html", gin.H{
 		"title": "Posts",
 	})
 }
@@ -105,8 +112,9 @@ func logout(c *gin.Context) {
 		return
 	}
 	//c.JSON(http.StatusOK, gin.H{"message": "Successfully logged out"})
-	c.HTML(http.StatusOK, "index.html", gin.H{
-		"title": "Posts",
+	c.HTML(http.StatusOK, "welcome.html", gin.H{
+		"title":   "Posts",
+		"warning": "",
 	})
 }
 
@@ -120,11 +128,12 @@ func loginCheck(c *gin.Context) {
 	session := sessions.Default(c)
 	user := session.Get(userkey)
 	if user == nil {
-		c.HTML(http.StatusOK, "index.html", gin.H{
-			"title": "Posts",
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "",
 		})
 	} else {
-		c.HTML(http.StatusOK, "index2.html", gin.H{
+		c.HTML(http.StatusOK, "home.html", gin.H{
 			"title": "Posts",
 		})
 	}
