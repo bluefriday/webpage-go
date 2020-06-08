@@ -32,9 +32,13 @@ func engine() *gin.Engine {
 	r.GET("/logout", logout)
 	r.GET("/test", test)
 
+	r.GET("/home", menu_home)
+	r.GET("/timeline", menu_timeline)
+
 	r.Static("dist", "./lib/dist")
 	r.Static("vendors", "./lib/vendors")
 	r.Static("image", "./resource/image")
+	r.Static("templates", "./templates")
 	r.LoadHTMLGlob("templates/*")
 
 	//로그인이 되었을때만 보이는 요청
@@ -56,6 +60,37 @@ func AuthRequired(c *gin.Context) {
 	}
 	// Continue down the chain to handler etc
 	c.Next()
+}
+
+func menu_home(c *gin.Context) {
+	session := sessions.Default(c)
+	user := session.Get(userkey)
+	if user == nil {
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "",
+		})
+	} else {
+		c.HTML(http.StatusOK, "main.html", gin.H{
+			"title":    "Posts",
+			"contents": "home.html",
+		})
+	}
+}
+func menu_timeline(c *gin.Context) {
+	session := sessions.Default(c)
+	user := session.Get(userkey)
+	if user == nil {
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "",
+		})
+	} else {
+		c.HTML(http.StatusOK, "main.html", gin.H{
+			"title":    "Posts",
+			"contents": "timeline.html",
+		})
+	}
 }
 
 func test(c *gin.Context) {
@@ -94,8 +129,9 @@ func login(c *gin.Context) {
 	}
 
 	//c.JSON(http.StatusOK, gin.H{"message": "Successfully authenticated user"})
-	c.HTML(http.StatusOK, "home.html", gin.H{
-		"title": "Posts",
+	c.HTML(http.StatusOK, "main.html", gin.H{
+		"title":    "Posts",
+		"contents": "home.html",
 	})
 }
 
@@ -133,8 +169,9 @@ func loginCheck(c *gin.Context) {
 			"warning": "",
 		})
 	} else {
-		c.HTML(http.StatusOK, "home.html", gin.H{
-			"title": "Posts",
+		c.HTML(http.StatusOK, "main.html", gin.H{
+			"title":    "Posts",
+			"contents": "home.html",
 		})
 	}
 
