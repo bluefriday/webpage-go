@@ -34,6 +34,8 @@ func engine() *gin.Engine {
 
 	r.GET("/home", menu_home)
 	r.GET("/timeline", menu_timeline)
+	r.GET("/photo", menu_photo)
+	r.GET("/me", menu_me)
 
 	r.Static("dist", "./lib/dist")
 	r.Static("vendors", "./lib/vendors")
@@ -62,6 +64,21 @@ func AuthRequired(c *gin.Context) {
 	c.Next()
 }
 
+func menu_me(c *gin.Context) {
+	session := sessions.Default(c)
+	user := session.Get(userkey)
+	if user == nil {
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "",
+		})
+	} else {
+		c.HTML(http.StatusOK, "main.html", gin.H{
+			"title":    "Posts",
+			"contents": "me.html",
+		})
+	}
+}
 func menu_home(c *gin.Context) {
 	session := sessions.Default(c)
 	user := session.Get(userkey)
@@ -89,6 +106,21 @@ func menu_timeline(c *gin.Context) {
 		c.HTML(http.StatusOK, "main.html", gin.H{
 			"title":    "Posts",
 			"contents": "timeline.html",
+		})
+	}
+}
+func menu_photo(c *gin.Context) {
+	session := sessions.Default(c)
+	user := session.Get(userkey)
+	if user == nil {
+		c.HTML(http.StatusOK, "welcome.html", gin.H{
+			"title":   "Posts",
+			"warning": "",
+		})
+	} else {
+		c.HTML(http.StatusOK, "main.html", gin.H{
+			"title":    "Posts",
+			"contents": "photo.html",
 		})
 	}
 }

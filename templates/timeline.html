@@ -1,31 +1,210 @@
-        <!-- Main Content -->
-            <!-- Breadcrumb -->
-            <nav class="hk-breadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb breadcrumb-light bg-transparent">
-                    <li class="breadcrumb-item active" aria-current="page">Home</li>
-                </ol>
-            </nav>
-            <!-- /Breadcrumb -->
+<!-- Main Content -->
+    <!-- Breadcrumb -->
+    <nav class="hk-breadcrumb" aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-light bg-transparent">
+            <li class="breadcrumb-item active" aria-current="page">Timeline</li>
+        </ol>
+    </nav>
+    <!-- /Breadcrumb -->
 
-            <!-- Container -->
-            <div class="container">
-                <h1>timeline page</h1>
+    <!-- Container -->
+    <div class="container">
+        <!-- Title -->
+        <div class="hk-pg-header mb-10">
+            <div>
+                <h4 class="hk-pg-title"><span class="pg-title-icon"><span class="feather-icon"><i data-feather="activity"></i></span></span>Timeline</h4>
             </div>
-            <!-- /Container -->
+            <div class="d-flex dropdown">
+                <button class="btn btn-light btn-sm dropdown-toggle"  data-toggle="dropdown" aria-expanded="false">latest Date</button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </div>
+        </div>
+        <!-- /Title -->
 
-            <!-- Footer -->
-            <div class="hk-footer-wrap container">
-                <footer class="footer">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-12">
-                            <p>2016년부터 만드는 중</p>
-                        </div>
-                        <div class="col-md-6 col-sm-12">
-                            <p class="d-inline-block">오늘도 행복한 하루 보내세요.</p>
+        <!--
+            가장 큰 단위는 card.        card 안에 card-header / card-body 로 구분
+            그 안의 세부단위는 media.   media 안에 media-img-wrap / media-body 로 구분.
+        -->
+
+        <!-- Row -->
+        <div class="row">
+            <div class="col-xl-12">
+
+
+
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        2020년
+                    </h6>							
+                    <div class="card-body bg-neon-light-3">
+                        <div class="user-activity">
+                            <div class="media pb-0">
+                                <div class="media-img-wrap">
+                                    <div class="avatar avatar-sm">
+                                        <img src="dist/img/avatar8.jpg" alt="user" class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <div>
+                                        <span class="font-weight-500 text-dark text-capitalize font-20">2020년 : Engine 변경 : nodejs -> Go framework</span>
+                                        <span class="d-block ma-15 mb-15">
+                                            <span class="pl-5">- 신규 테마(bootstrap) 적용</span><br>
+                                            <span class="pl-5">- TBD</span><br>
+                                            <span class="pl-5">- TBD</span><br>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </footer>
-            </div>
-            <!-- /Footer -->
+                </div>
 
-        <!-- /Main Content -->
+
+
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        2019년
+                    </h6>							
+                    <div class="card-body">
+                        <div class="user-activity">
+                            <div class="media pb-0">
+                                <div class="media-img-wrap">
+                                    <div class="avatar avatar-sm">
+                                        <img src="dist/img/avatar8.jpg" alt="user" class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <div>
+                                        <span class="font-weight-500 text-dark text-capitalize font-20">2019년 : 플랫폼 변경 : AWS -> GCP</span>
+                                        <span class="d-block ma-15 mb-15">
+                                            <span class="pl-5">- Google Cloud Platform 이용</span><br>
+                                            <span class="pl-5">- Jenkins 연계를 통한 CI/CD</span><br>
+                                            <span class="pl-5">- Google MAP API update</span><br>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        2018년
+                    </h6>							
+                    <div class="card-body">
+                        <div class="user-activity">
+                            <div class="media pb-0">
+                                <div class="media-img-wrap">
+                                    <div class="avatar avatar-sm">
+                                        <img src="dist/img/avatar8.jpg" alt="user" class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <div>
+                                        <span class="font-weight-500 text-dark text-capitalize font-20">2018년 : Containerized Webpage</span>
+                                        <span class="d-block ma-15 mb-15">
+                                            <span class="pl-5">- 미사용 menus 삭제 및 용도 변경</span><br>
+                                            <span class="pl-5">- AWS RDS 를 이용한 Database 연계 test</span><br>
+                                            <span class="pl-5">- Container 를 이용하여 nodejs 서버 구동</span><br>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        2017년
+                    </h6>							
+                    <div class="card-body">
+                        <div class="user-activity">
+                            <div class="media pb-0">
+                                <div class="media-img-wrap">
+                                    <div class="avatar avatar-sm">
+                                        <img src="dist/img/avatar8.jpg" alt="user" class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <div>
+                                        <span class="font-weight-500 text-dark text-capitalize font-20">2017년 : bootstrap theme 구매 및 적용 시작</span>
+                                        <span class="d-block ma-15 mb-15">
+                                            <span class="pl-5">- Login page - login/logout 및 session 기능 추가</span><br>
+                                            <span class="pl-5">- 2017년 09월 11일 메뉴 선택 시, 우측 페이지만 load (전체 새로고침 방지)</span><br>
+                                            <span class="pl-5">- map api(deprecated) 수정, 여행지 목록 별도관리</span><br>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card card-lg">
+                    <h6 class="card-header">
+                        2016년
+                    </h6>							
+                    <div class="card-body">
+                        <div class="user-activity">
+                            <div class="media pb-0">
+                                <div class="media-img-wrap">
+                                    <div class="avatar avatar-sm">
+                                        <img src="dist/img/avatar8.jpg" alt="user" class="avatar-img rounded-circle">
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <div>
+                                        <span class="font-weight-500 text-dark text-capitalize font-20">2016년 : my web page 구상 (Ver 1)</span>
+                                        <span class="d-block ma-15 mb-15">
+                                            <span class="pl-5">- Layout 구성 : Home, sub-menus</span><br>
+                                            <span class="pl-5">- Image 반응형 리사이징, EC2 instance로 page 구동</span><br>
+                                            <span class="pl-5">- Google MAP API 이용 지도 추가(travle 페이지)</span><br>
+                                            <span class="pl-5">- BGM 구현(jPlayer plugin)</span>
+                                        </span>
+                                        <!--
+                                        <span class="d-block font-13">32 days ago</span>
+                                        -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- /Row -->
+    </div>
+    <!-- /Container -->
+
+    <!-- Footer -->
+    <div class="hk-footer-wrap container">
+        <footer class="footer">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <p>Pampered by<a href="https://hencework.com/" class="text-dark" target="_blank">Hencework</a> © 2019</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <p class="d-inline-block">Follow us</p>
+                    <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
+                    <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
+                    <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- /Footer -->
+<!-- /Main Content -->
