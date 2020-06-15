@@ -21,6 +21,10 @@
     <!-- Toastr CSS -->
     <link href="vendors/jquery-toast-plugin/dist/jquery.toast.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Data Table CSS -->
+    <link href="vendors/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+    <link href="vendors/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet" type="text/css" />
+
     <!-- Custom CSS -->
     <link href="dist/css/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -434,22 +438,22 @@
                     </div>
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="/home">
+                            <a class="nav-link" href="/menu?menu=home">
                                 <span class="nav-link-text">Home</span>
                             </a>
 						</li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/me">
+                            <a class="nav-link" href="/menu?menu=me">
                                 <span class="nav-link-text">Me</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/timeline">
+                            <a class="nav-link" href="/menu?menu=timeline">
                                 <span class="nav-link-text">Timeline</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/menu?menu=travel">
                                 <span class="nav-link-text">Travel</span>
                             </a>
 						</li>
@@ -484,7 +488,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/photo">
+                            <a class="nav-link" href="/menu?menu=photo">
                                 <span class="nav-link-text">Photo album</span>
                             </a>
                         </li>
@@ -629,7 +633,41 @@
     <script src="dist/js/init.js"></script>
 	<script src="dist/js/dashboard-data.js"></script>
 
-	<!--my custom javascript-->
+    <!-- Init JavaScript -->
+    <script src="dist/js/gmap-data.js"></script>
+
+
+    <!-- Data Table JavaScript -->
+    <!-- 여기서 한번 부르면 load 하면 못읽어오네? 이런식이면 일단 주석(20200615)-->
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="dist/js/dataTables-data.js"></script>
+ 
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ 
 	<script language="javascript">
 
 		var MAX_IMAGE_NUM = 29;
@@ -701,21 +739,36 @@
 		}
 
 
-	$(document).ready(function(){
+	    $(document).ready(function(){
         
-        var menu_name=document.getElementById("menu_name").textContent
-        console.log("menu name : ", menu_name)
-        $("#main_contents").load("templates/"+menu_name);
-        if(menu_name=="home.html"){
-            //최초 load가 되기전에 작동하여 시간차가 발생해서 0.1초 대기
-            //다른 좋은 방법이 있으면 수정해보자
-            setTimeout(function(){
-               // 0.1초 후 작동해야할 코드
-               initImage(); //최초 하드코딩된 me_01 이미지를 가져와서 랜덤 이미지로 변경해서 표시
-            }, 100);
-        }
-	});	
-	
+            var menu_name=document.getElementById("menu_name").textContent
+            console.log("menu name : ", menu_name)
+            $("#main_contents").load("templates/"+menu_name);
+            if(menu_name=="home.html"){
+                //최초 load가 되기전에 작동하여 시간차가 발생해서 0.1초 대기
+                //다른 좋은 방법이 있으면 수정해보자
+                setTimeout(function(){
+                // 0.1초 후 작동해야할 코드
+                initImage(); //최초 하드코딩된 me_01 이미지를 가져와서 랜덤 이미지로 변경해서 표시
+                }, 100);
+            }
+            else if(menu_name=="me.html"){
+                console.log("Me 페이지 호출");
+                
+
+                $('#datable_1').DataTable({
+                    responsive: true,
+                    autoWidth: false,
+                    language: { search: "",
+                    searchPlaceholder: "Search",
+                    sLengthMenu: "_MENU_items"
+
+                    }
+                });
+
+                console.log("Me 페이지 호출2");
+	        }
+        })	
 	</script>
 	
 </body>

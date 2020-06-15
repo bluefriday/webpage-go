@@ -1,4 +1,7 @@
-        <!-- Main Content -->
+
+
+
+		<!-- Main Content -->
 			<!-- Container -->
             <div class="container-fluid">
                 <!-- Row -->
@@ -34,16 +37,16 @@
 							<div class="container">
 								<ul class="nav nav-light nav-tabs" role="tablist">
 									<li class="nav-item">
-										<a href="#" class="d-flex h-60p align-items-center nav-link active">Feed</a>
+										<a href="#" class="d-flex h-60p align-items-center nav-link active">나에요</a>
 									</li>
 									<li class="nav-item">
-										<a href="#" class="d-flex h-60p align-items-center nav-link">Projects</a>
+										<a href="#" class="d-flex h-60p align-items-center nav-link">개발자란?</a>
 									</li>
 									<li class="nav-item">
-										<a href="#" class="d-flex h-60p align-items-center nav-link">Groups</a>
+										<a href="#" class="d-flex h-60p align-items-center nav-link">배운 것과 남긴 것</a>
 									</li>
 									<li class="nav-item">
-										<a href="#" class="d-flex h-60p align-items-center nav-link">Photos</a>
+										<a href="#" class="d-flex h-60p align-items-center nav-link">해온 것</a>
 									</li>
 								</ul>
 							</div>	
@@ -53,23 +56,129 @@
 								<div class="container">
 
 
-                                    <div class="hk-row">  <!-- 이게 한 row-->
-                                        <h5>사진 / 짧은 자기소개 멘트 / 지도(사는곳) </h5>
-                                    </div><br>
-                                    <div class="hk-row">  <!-- 이게 한 row-->
-                                        <h5>목표(철학) / 현재 직무 / 가능 or 원하는 포지션 </h5>
-                                    </div><br>
-                                    <div class="hk-row">  <!-- 이게 한 row-->
-                                        <h5>학력(+class) / 자격증 / 관심 기술분야 </h5>
-                                    </div><br>
-                                    <div class="hk-row">  <!-- 이게 한 row-->
-                                        <h5>경력 / 프로젝트 / 사용 기술까지 (이건 표) </h5>
-                                    </div><br>
+
+
+
+
+
+
+
+
+
+
 
 
 
 									<div class="hk-row">  <!-- 이게 한 row-->
-										<div class="col-lg-8">
+
+										<!-- left area : my picture -->
+										<div class="col-lg-6">
+											<div class="card card-profile-feed">
+                                                <div class="card-header card-header-action">
+													<h6>나에요</h6>
+
+												</div>
+												<div class="card-body">
+													<div class="col-xl-12 pa-0">
+														<section class="hk-sec-wrapper">
+															<div class="row">
+																<div class="col-sm">
+																	<div class="row">
+																	<img src="image/me/me_03.jpg" class="img-fluid rounded mx-auto d-block" alt="img">
+																</div>
+															</div>
+														</section>
+														<ul class="list-group list-group-flush">
+															<li class="list-group-item">
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"재미있는 그리고 재미있게 개발을 해야지"</span>
+																<br/>
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"사회에 기여할 수 있는 개발자가 되고 싶다"</span>
+																<br/>
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"익숙함과 그에 따르는 편안함에 주의하며 살자"</span>
+															</li>
+														</ul>
+																<!--
+														<span class="d-block text-capitalize font-14">제 사진 입니다.</span>
+														-->
+													</div>
+
+
+												</div>
+
+                                            </div>
+										</div>
+
+
+
+										<!-- Right area : google map -->
+										<div class="col-lg-6">
+
+											<div class="card card-profile-feed">
+                                                <div class="card-header card-header-action">
+													<h6>여기에 살고 있어요</h6>
+												</div>
+												<div class="card-body">
+													<div class="col-xl-12 pa-0">
+														<section class="hk-sec-wrapper">
+
+														<!--gmap 클래스는 너무 크기가 커서 gmap class 안쓰고 그냥 height를 사진높이와 맞게 지정(20200614)-->
+														<div id="map_me" style="height:333px"></div>
+														</section>
+														<ul class="list-group list-group-flush">
+															<li class="list-group-item">
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"자란 곳 : 경기도 안양시 비산동"</span>
+																<br/>
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"일하는 곳 : 서울 송파구 (잠실)"</span>
+																<br/>
+																<span><span>-</span></span>
+																<span class="ml-5 text-dark">"지내는 곳 : 서울 광진구 구의동"</span>
+															</li>
+														</ul>
+														</div>
+											</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div class="hk-row">  <!-- 이게 한 row-->
+
+
+										<div class="col-lg-6">
 											<div class="card card-profile-feed">
                                                 <div class="card-header card-header-action">
 													<div class="media align-items-center">
@@ -79,33 +188,21 @@
 															</div>
 														</div>
 														<div class="media-body">
-															<div class="text-capitalize font-weight-500 text-dark">Madelyn Rascon</div>
+															<div class="text-capitalize font-weight-500 text-dark">개발 철학</div>
 															<div class="font-13">25 min</div>
-														</div>
-													</div>
-													<div class="d-flex align-items-center card-action-wrap">
-														<div class="inline-block dropdown">
-															<a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a class="dropdown-item" href="#">Action</a>
-																<a class="dropdown-item" href="#">Another action</a>
-																<a class="dropdown-item" href="#">Something else here</a>
-																<div class="dropdown-divider"></div>
-																<a class="dropdown-item" href="#">Separated link</a>
-															</div>
 														</div>
 													</div>
 												</div>
 												<div class="card-body">
-													<p class="card-text mb-30">There was that time artists at Sequence opted to hand-Sharpie the lorem ipsum passage on a line of paper bags they designed for Chipotle.</p>
+													<p class="card-text mb-30">I have a lot of interest in web development. And aim to be a software architect who can develop/build/manage web applications.</p>
 													<div class="card">
 														<div class="position-relative">
 															<img class="card-img-top d-block" src="dist/img/cropper.jpg" alt="Card image cap">
 															<a href="#" class="btn btn-dark btn-wth-icon icon-wthot-bg btn-rounded btn-pg-link"><span class="icon-label"><i class="ion ion-md-link"></i></span><span class="btn-text">website</span></a>
 														</div>
 														<div class="card-body">
-															<h5 class="card-title">Bacon chicken turducken spare ribs.</h5>
-															<p class="card-text">Of course, we'd be remiss not to include the veritable cadre of lorem ipsum knock offs featuring: Bacon Ipsum, Hipster Ipsum, Corporate Ipsum, Legal Ipsum.</p>
+															<h5 class="card-title">현재 직무는 아키텍트.</h5>
+															<p class="card-text">하고 싶은 직무 혹은 할 수 있는 직무. 이 라인 그러니까 인생에서의 개발 목표. 흥미분야. 학력 및 자격증 이쪽은 3개를 잘 조절해보자.</p>
 														</div>
 													</div>
 												</div>
@@ -119,194 +216,38 @@
 													</div>
                                                 </div>
                                             </div>
-											<div class="card-columns card-column-1">
-												<div class="card card-profile-feed mb-0 rounded-bottom-0">
-													<div class="card-header card-header-action">
-														<div class="media align-items-center">
-															<div class="media-img-wrap d-flex mr-10">
-																<div class="avatar avatar-sm">
-																	<img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<div class="text-capitalize font-weight-500 text-dark">Mitsoku Heid</div>
-																<div class="font-13">3 hrs</div>
-															</div>
-														</div>
-														<div class="d-flex align-items-center card-action-wrap">
-															<div class="inline-block dropdown">
-																<a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-																<div class="dropdown-menu dropdown-menu-right">
-																	<a class="dropdown-item" href="#">Action</a>
-																	<a class="dropdown-item" href="#">Another action</a>
-																	<a class="dropdown-item" href="#">Something else here</a>
-																	<div class="dropdown-divider"></div>
-																	<a class="dropdown-item" href="#">Separated link</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="card-body">
-														<p class="card-text mb-30">Not to mention, Cupcake Ipsum, Bob Ross Ipsum (“happy little clouds”), and the furry Cat Ipsum.</p>
-														<div class="feed-img-layout">
-															<div class="row h-200p">
-																<div class="col-6 h-100">
-																	<div class="feed-img h-100" style="background-image:url(dist/img/slide4.jpg);"></div>
-																</div>
-																<div class="col-6 h-100">
-																	<div class="row h-100">
-																		<div class="col-sm-12 h-95p mb-10">
-																			<div class="feed-img h-100" style="background-image:url(dist/img/slide1.jpg);"></div>
-																		</div>
-																		<div class="col-sm-12 h-95p">
-																			<div class="row h-100">
-																				<div class="col-6 h-100">
-																					<div class="feed-img h-100" style="background-image:url(dist/img/slide2.jpg);"></div>
-																				</div>
-																				<div class="col-6 h-100">
-																					<div class="feed-img h-100" style="background-image:url(dist/img/slide3.jpg);"></div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="card-footer justify-content-between">
-														<div>
-															<a href="#"><i class="ion ion-md-heart text-primary"></i>94</a>
-														</div>
-														<div>
-															<a href="#">1.5K comments</a>
-															<a href="#">18 shares</a>
-														</div>
-													</div>
-												</div>
-												<div class="card card-profile-feed border-top-0 rounded-top-0">
-													<div class="card-body">
-														<button class="btn btn-light btn-sm btn-block mb-25">Hide comments</button>
-														<div class="media">
-															<div class="media-img-wrap d-flex mr-10">
-																<div class="avatar avatar-xs">
-																	<img src="dist/img/avatar5.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<div class="text-capitalize font-14 font-weight-500 text-dark">Eziquiel Merideth</div>
-																<div class="font-15"><p>So there you have it. The nonsense words unable to fully escape meaning.</p></div>
-																<div class="d-flex mt-10">
-																	<span class="font-14 text-light mr-15">1 hr</span>
-																	<a href="#" class="font-14 text-light text-capitalize font-weight-500">reply</a>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="card-footer">
-														<div class="media w-100 align-items-center">
-															<div class="media-img-wrap d-flex mr-15">
-																<div class="avatar avatar-xs">
-																	<img src="dist/img/avatar11.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<textarea class="form-control filled-input bg-transparent" rows="1" placeholder="Leave a comment..."></textarea>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="card card-profile-feed">
-                                                <div class="card-header card-header-action">
-													<div class="media align-items-center">
-														<div class="media-img-wrap d-flex mr-10">
-															<div class="avatar avatar-sm">
-																<img src="dist/img/avatar6.jpg" alt="user" class="avatar-img rounded-circle">
-															</div>
-														</div>
-														<div class="media-body">
-															<div class="text-capitalize font-weight-500 text-dark">Johnie Metoyer</div>
-															<div class="font-13">11 hrs</div>
-														</div>
-													</div>
-													<div class="d-flex align-items-center card-action-wrap">
-														<div class="inline-block dropdown">
-															<a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a class="dropdown-item" href="#">Action</a>
-																<a class="dropdown-item" href="#">Another action</a>
-																<a class="dropdown-item" href="#">Something else here</a>
-																<div class="dropdown-divider"></div>
-																<a class="dropdown-item" href="#">Separated link</a>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="card-body">
-													<p class="card-text mb-30">Below are the original Latin passages from which Lorem Ipsum was derived, paired with their 1914 translations by H. Rackham.</p>
-													<div class="card">
-														<div class="position-relative">
-															<img class="card-img-top rounded d-block" src="dist/img/slide7.jpg" alt="Card image cap">
-															<a href="#" class="btn-video-link"></a>
-														</div>
-													</div>
-												</div>
-												<div class="card-footer justify-content-between">
-                                                    <div>
-														<a href="#"><i class="ion ion-md-heart text-primary"></i>142</a>
-													</div>
-													<div>
-														<a href="#">751 comments</a>
-														<a href="#">2 shares</a>
-													</div>
-                                                </div>
-                                            </div>
 										</div>
-										<div class="col-lg-4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										<!-- Right area-->
+										<div class="col-lg-6">
+
 											<div class="card card-profile-feed">
                                                 <div class="card-header card-header-action">
-													<div class="media align-items-center">
-														<div class="media-img-wrap d-flex mr-10">
-															<div class="avatar avatar-sm">
-																<img src="dist/img/avatar7.jpg" alt="user" class="avatar-img rounded-circle">
-															</div>
-														</div>
-														<div class="media-body">
-															<div class="text-capitalize font-weight-500 text-dark">Lee Heechang</div>
-															<div class="font-13">Developer</div>
-														</div>
-													</div>
-												</div>
-												<div class="row text-center">
-													<div class="col-4 border-right pr-0">
-														<div class="pa-15">
-															<span class="d-block display-6 text-dark mb-5">154</span>
-															<span class="d-block text-capitalize font-14">photos</span>
-														</div>
-													</div>
-													<div class="col-4 border-right px-0">
-														<div class="pa-15">
-															<span class="d-block display-6 text-dark mb-5">65</span>
-															<span class="d-block text-capitalize font-14">followers</span>
-														</div>
-													</div>
-													<div class="col-4 pl-0">
-														<div class="pa-15">
-															<span class="d-block display-6 text-dark mb-5">433</span>
-															<span class="d-block text-capitalize font-14">views</span>
-														</div>
-													</div>
-												</div>
-												<ul class="list-group list-group-flush">
-                                                    <li class="list-group-item"><span><i class="ion ion-md-calendar font-18 text-light-20 mr-10"></i><span>Majar:</span></span><span class="ml-5 text-dark">Computer Science</span></li>
-                                                    <li class="list-group-item"><span><i class="ion ion-md-briefcase font-18 text-light-20 mr-10"></i><span>Work at:</span></span><span class="ml-5 text-dark">Samsung SDS</span></li>
-                                                    <li class="list-group-item"><span><i class="ion ion-md-home font-18 text-light-20 mr-10"></i><span>Lives in:</span></span><span class="ml-5 text-dark">Seoul, KR</span></li>
-                                                    <li class="list-group-item"><span><i class="ion ion-md-pin font-18 text-light-20 mr-10"></i><span>Positon</span></span><span class="ml-5 text-dark">Container Engineer</span></li>
-                                                </ul>
-											 </div>
-											<div class="card card-profile-feed">
-                                                <div class="card-header card-header-action">
-													<h6>My interesting field</h6>
+													<h6>My interesting field (격자로)</h6>
 												</div>
 												<ul class="list-group list-group-flush">
                                                     <li class="list-group-item border-0">
@@ -376,211 +317,277 @@
 													</li>
                                                 </ul>
 											</div>
-											<div class="card card-profile-feed">
-												<div class="card-header card-header-action">
-													<h6><span>Friends <span class="badge badge-soft-primary ml-5">212</span></span></h6>
-													<a href="#" class="font-14 ml-auto">View all</a>
-												</div>
-												<div class="card-body pb-5">
-													<div class="hk-row text-center">
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar1.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Evie Ono</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar2.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Clay Masse</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar3.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Madelyn Rascon</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar4.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Mitsoku Heid</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar5.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Eziquiel Merideth</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar6.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Johnie Metoyer</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar7.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Angelic Lauver</span>
-														</div>
-														<div class="col-3 mb-15">
-															<div class="w-100">
-																<img src="dist/img/avatar8.jpg" alt="user" class="img-fluid rounded">
-															</div>
-															<span class="d-block font-14 text-truncate">Cecilia Rios</span>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="card card-profile-feed">
-												<div class="card-header card-header-action">
-													<h6><span>Groups <span class="badge badge-soft-success ml-5">12</span></span></h6>
-													<a href="#" class="font-14 ml-auto">View all</a>
-												</div>	
-												<ul class="list-group list-group-flush">
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<img src="dist/img/slide1.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize">Landscape Group</span>
-																<span class="d-block font-13">1.25K Members</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<img src="dist/img/slide2.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize">Josh Groben Fanclub</span>
-																<span class="d-block font-13">2M Members</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<img src="dist/img/avatar12.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize">UI/UX Lead</span>
-																<span class="d-block font-13">8K Members</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<img src="dist/img/slide3.jpg" alt="user" class="avatar-img rounded-circle">
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize">Design Yatra</span>
-																<span class="d-block font-13">14K Members</span>
-															</div>
-														</div>
-													</li>
-												</ul>
-											</div>
+
 										
 											<div class="card card-profile-feed">
 												<div class="card-header card-header-action">
-													<h6><span>Links <span class="badge badge-soft-warning ml-5">7</span></span></h6>
-													<div class="d-flex align-items-center card-action-wrap">
-														<div class="inline-block dropdown">
-															<a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
-															<div class="dropdown-menu dropdown-menu-right">
-																<a class="dropdown-item" href="#">Action</a>
-																<a class="dropdown-item" href="#">Another action</a>
-																<a class="dropdown-item" href="#">Something else here</a>
-																<div class="dropdown-divider"></div>
-																<a class="dropdown-item" href="#">Separated link</a>
-															</div>
+													<h6><span>학력 및 전공 / 자격증(세로줄로 2영역으로)</span></h6>
+												</div>	
+
+
+
+
+												<div class="card-body">
+													<div class="row text-center">
+														<div class="col-12 px-0">
+															<div class="row">
+																<div class="col-sm">
+																	<div class="table-wrap">
+																		<table id="datable_2" class="table table-hover display">
+																			<thead>
+																				<tr>
+																					<th>School</th>
+																					<th>Score</th>
+																					<th>Graduate</th>
+																					<th>Location</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>Gavin Cortez</td>
+																					<td>Team Leader</td>
+																					<td>San Francisco</td>
+																					<td>22</td>
+																				</tr>
+																				<tr>
+																					<td>Martena Mccray</td>
+																					<td>Post-Sales support</td>
+																					<td>Edinburgh</td>
+																					<td>46</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>		
 														</div>
 													</div>
-												</div>	
-												<ul class="list-group list-group-flush">
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-teal rounded-circle"><span class="initial-wrap"><span>G</span></span>
-																	</span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize text-truncate mw-150p">Google.com</span>
-																<span class="d-block font-13 text-truncate mw-150p">google.com</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-primary rounded-circle"><span class="initial-wrap"><span>PR</span></span>
-																	</span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize text-truncate mw-150p">Improve your business</span>
-																<span class="d-block font-13 text-truncate mw-150p">yahoo.com</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-success rounded-circle"><span class="initial-wrap"><span>AB</span></span>
-																	</span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize text-truncate mw-150p">Cast the cookware</span>
-																<span class="d-block font-13 text-truncate mw-150p">yahoo.com</span>
-															</div>
-														</div>
-													</li>
-													<li class="list-group-item border-0">
-														<div class="media align-items-center">
-															<div class="d-flex media-img-wrap mr-15">
-																<div class="avatar avatar-sm">
-																	<span class="avatar-text avatar-text-inv-danger rounded-circle"><span class="initial-wrap"><span>LR</span></span>
-																	</span>
-																</div>
-															</div>
-															<div class="media-body">
-																<span class="d-block text-dark text-capitalize text-truncate mw-150p">The universe thought sds sa</span>
-																<span class="d-block font-13 text-truncate mw-150p">facebook.com</span>
-															</div>
-														</div>
-													</li>
-												</ul>
+												</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 											</div>
-										
-											<div class="card bg-primary text-center border-0">
-                                                <div class="twitter-slider-wrap card-body">
-                                                    <div class="twitter-icon text-center mb-15">
-                                                        <i class="fa fa-twitter"></i>
-                                                    </div>
-                                                    <div id="tweets_fetch" class="owl-carousel owl-theme"></div>
-                                                </div>
-                                            </div>
 										</div>
 									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									<div class="hk-row">  <!-- 이게 한 row-->
+
+										<!-- left area : my picture -->
+										<div class="col-lg-12">
+											<div class="card card-profile-feed">
+                                                <div class="card-header card-header-action">
+													<h6>나에요</h6>
+
+												</div>
+												<div class="card-body">
+
+
+													<div class="row">
+														<div class="col-lg-12">
+															<section class="hk-sec-wrapper">
+																<h5 class="hk-sec-title">Project</h5>
+																<p class="mb-40">그 동안 내가 다녀온 프로젝트와 거기서 배운 것들.</p>
+																<div class="row">
+																	<div class="col-sm">
+																		<div class="table-wrap">
+																			<table id="datable_1" class="table table-hover w-100 display pb-30">
+																				<thead>
+																					<tr>
+																						<th>Project</th>
+																						<th>Position</th>
+																						<th>Role</th>
+																						<th>Detail</th>
+																						<th>Start date</th>
+																						<th>End date</th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>Tiger Nixon</td>
+																						<td>System Architect</td>
+																						<td>Edinburgh</td>
+																						<td>61</td>
+																						<td>2011/04/25</td>
+																						<td>$320,800</td>
+																					</tr>
+																					<tr>
+																						<td>Garrett Winters</td>
+																						<td>Accountant</td>
+																						<td>Tokyo</td>
+																						<td>63</td>
+																						<td>2011/07/25</td>
+																						<td>$170,750</td>
+																					</tr>
+																					<tr>
+																						<td>Ashton Cox</td>
+																						<td>Junior Technical Author</td>
+																						<td>San Francisco</td>
+																						<td>66</td>
+																						<td>2009/01/12</td>
+																						<td>$86,000</td>
+																					</tr>
+																					<tr>
+																						<td>Cedric Kelly</td>
+																						<td>Senior Javascript Developer</td>
+																						<td>Edinburgh</td>
+																						<td>22</td>
+																						<td>2012/03/29</td>
+																						<td>$433,060</td>
+																					</tr>
+																					<tr>
+																						<td>Airi Satou</td>
+																						<td>Accountant</td>
+																						<td>Tokyo</td>
+																						<td>33</td>
+																						<td>2008/11/28</td>
+																						<td>$162,700</td>
+																					</tr>
+																					<tr>
+																						<td>Brielle Williamson</td>
+																						<td>Integration Specialist</td>
+																						<td>New York</td>
+																						<td>61</td>
+																						<td>2012/12/02</td>
+																						<td>$372,000</td>
+																					</tr>
+																					<tr>
+																						<td>Herrod Chandler</td>
+																						<td>Sales Assistant</td>
+																						<td>San Francisco</td>
+																						<td>59</td>
+																						<td>2012/08/06</td>
+																						<td>$137,500</td>
+																					</tr>
+																					<tr>
+																						<td>Gavin Cortez</td>
+																						<td>Team Leader</td>
+																						<td>San Francisco</td>
+																						<td>22</td>
+																						<td>2008/10/26</td>
+																						<td>$235,500</td>
+																					</tr>
+																					<tr>
+																						<td>Martena Mccray</td>
+																						<td>Post-Sales support</td>
+																						<td>Edinburgh</td>
+																						<td>46</td>
+																						<td>2011/03/09</td>
+																						<td>$324,050</td>
+																					</tr>
+																					<tr>
+																						<td>Unity Butler</td>
+																						<td>Marketing Designer</td>
+																						<td>San Francisco</td>
+																						<td>47</td>
+																						<td>2009/12/09</td>
+																						<td>$85,675</td>
+																					</tr>
+																					<tr>
+																						<td>Howard Hatfield</td>
+																						<td>Office Manager</td>
+																						<td>San Francisco</td>
+																						<td>51</td>
+																						<td>2008/12/16</td>
+																						<td>$164,500</td>
+																					</tr>
+																					<tr>
+																						<td>Hope Fuentes</td>
+																						<td>Secretary</td>
+																						<td>San Francisco</td>
+																						<td>41</td>
+																						<td>2010/02/12</td>
+																						<td>$109,850</td>
+																					</tr>
+																					<tr>
+																						<td>Vivian Harrell</td>
+																						<td>Financial Controller</td>
+																						<td>San Francisco</td>
+																						<td>62</td>
+																						<td>2009/02/14</td>
+																						<td>$452,500</td>
+																					</tr>
+																					<tr>
+																						<td>Donna Snider</td>
+																						<td>Customer Support</td>
+																						<td>New York</td>
+																						<td>27</td>
+																						<td>2011/01/25</td>
+																						<td>$112,000</td>
+																					</tr>
+																				</tbody>
+																				<tfoot>
+																					<tr>
+																						<th>Project</th>
+																						<th>Position</th>
+																						<th>Role</th>
+																						<th>Detail</th>
+																						<th>Start date</th>
+																						<th>End date</th>
+																					</tr>
+																				</tfoot>
+																			</table>
+																		</div>
+																	</div>
+																</div>
+															</section>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 								</div>
 							</div>
 						</div>	
@@ -607,4 +614,69 @@
                 </footer>
             </div>
             <!-- /Footer -->
-        <!-- /Main Content -->
+		<!-- /Main Content -->
+		
+
+
+
+
+	<!--my custom javascript : datatable-->
+    <!-- Data Table JavaScript -->
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="dist/js/dataTables-data.js"></script>
+
+
+	<!--my custom javascript : google map-->
+	<script
+	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHDDloJ6W5zBU9Xns9rXQvGtm_kC-aegY&callback=initMap&libraries=&v=weekly" defer>
+	</script>
+	<script>
+        (function(exports) {
+            "use strict";
+
+			var map;
+			var mapOption = {
+				//my city location information
+				center : {
+					lat : 37.545877,
+					lng : 127.090931
+				},
+				zoom : 10
+			}
+
+            function initMap() {
+				try{
+					map = new google.maps.Map(document.getElementById('map_me'),mapOption);
+					// 마커로 사용할 이미지 주소
+					var marker;
+					//maps.google.com 에서 주소 검색후 우클릭으로 위도, 경도 조사
+					//1. my home
+					marker = new google.maps.Marker({
+						position : {
+							lat : 37.545877,
+							lng : 127.090931
+						},
+						map : map,
+						title : 'my home :)'
+					});
+				}catch (e){
+					console.log("[INFO] Fail to load google api. Map div will be replaced :)");
+					$('#map_me').append('<img src="/resource/img/myweb_019.png" style="width:100%; height:100%"/>');
+				}
+
+
+            }
+            exports.initMap = initMap;
+        })((this.window = this.window || {}));
+    </script>

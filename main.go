@@ -32,10 +32,10 @@ func engine() *gin.Engine {
 	r.GET("/logout", logout)
 	r.GET("/test", test)
 
-	r.GET("/home", menu_home)
-	r.GET("/timeline", menu_timeline)
-	r.GET("/photo", menu_photo)
-	r.GET("/me", menu_me)
+	r.GET("/menu", menu)
+	//r.GET("/timeline", menu_timeline)
+	//r.GET("/photo", menu_photo)
+	//r.GET("/me", menu_me)
 
 	r.Static("dist", "./lib/dist")
 	r.Static("vendors", "./lib/vendors")
@@ -64,7 +64,7 @@ func AuthRequired(c *gin.Context) {
 	c.Next()
 }
 
-func menu_me(c *gin.Context) {
+func menu(c *gin.Context) {
 	session := sessions.Default(c)
 	user := session.Get(userkey)
 	if user == nil {
@@ -73,54 +73,12 @@ func menu_me(c *gin.Context) {
 			"warning": "",
 		})
 	} else {
+		//세션이 유효하면, GET 파라미터의 menu 항목 추출 (기본값 "home")
+		menu := c.DefaultQuery("menu", "home")
+		//fmt.Println("menu : " + menu)
 		c.HTML(http.StatusOK, "main.html", gin.H{
 			"title":    "Posts",
-			"contents": "me.html",
-		})
-	}
-}
-func menu_home(c *gin.Context) {
-	session := sessions.Default(c)
-	user := session.Get(userkey)
-	if user == nil {
-		c.HTML(http.StatusOK, "welcome.html", gin.H{
-			"title":   "Posts",
-			"warning": "",
-		})
-	} else {
-		c.HTML(http.StatusOK, "main.html", gin.H{
-			"title":    "Posts",
-			"contents": "home.html",
-		})
-	}
-}
-func menu_timeline(c *gin.Context) {
-	session := sessions.Default(c)
-	user := session.Get(userkey)
-	if user == nil {
-		c.HTML(http.StatusOK, "welcome.html", gin.H{
-			"title":   "Posts",
-			"warning": "",
-		})
-	} else {
-		c.HTML(http.StatusOK, "main.html", gin.H{
-			"title":    "Posts",
-			"contents": "timeline.html",
-		})
-	}
-}
-func menu_photo(c *gin.Context) {
-	session := sessions.Default(c)
-	user := session.Get(userkey)
-	if user == nil {
-		c.HTML(http.StatusOK, "welcome.html", gin.H{
-			"title":   "Posts",
-			"warning": "",
-		})
-	} else {
-		c.HTML(http.StatusOK, "main.html", gin.H{
-			"title":    "Posts",
-			"contents": "photo.html",
+			"contents": menu + ".html",
 		})
 	}
 }

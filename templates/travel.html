@@ -1,0 +1,141 @@
+        <!-- Main Content -->
+            <!-- Breadcrumb -->
+            <nav class="hk-breadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-light bg-transparent">
+                    <li class="breadcrumb-item active" aria-current="page">Travel</li>
+                </ol>
+            </nav>
+            <!-- /Breadcrumb -->
+
+            <!-- Container -->
+            <div class="container">
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-xl-12">
+                        <!--gmap 클래스는 너무 크기가 커서 gmap class 안쓰고 그냥 height를 사진높이와 맞게 지정(20200614)-->
+                        <div id="map_me" style="height:700px"></div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+            <!-- /Container -->
+
+            <!-- Footer -->
+            <div class="hk-footer-wrap container">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>2016년부터 만드는 중</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <p class="d-inline-block">오늘도 행복한 하루 보내세요.</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+            
+        <!-- /Main Content -->
+
+
+
+
+	<!--my custom javascript : google map-->
+	<script
+	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHDDloJ6W5zBU9Xns9rXQvGtm_kC-aegY&callback=initMap&libraries=&v=weekly" defer>
+	</script>
+	<script>
+        (function(exports) {
+            "use strict";
+
+			var map;
+			var mapOption = {
+				//대전 강변예식장
+				center : {
+					lat : 36.336046,
+					lng : 127.421626
+				},
+				zoom : 8
+			}
+
+            function initMap() {
+				try{
+					map = new google.maps.Map(document.getElementById('map_me'),mapOption);
+					// 마커로 사용할 이미지 주소
+					var marker;
+					//maps.google.com 에서 주소 검색후 우클릭으로 위도, 경도 조사
+					//1. my home
+					marker = new google.maps.Marker({
+						position : {
+							lat : 37.545877,
+							lng : 127.090931
+						},
+						map : map,
+						title : 'my home :)'
+                    });
+                    
+                    var icons = {
+                        travel  :   {icon:'image/marker/map-marker-pin.png'},
+                        home    :   {icon:'png file'},
+                        school  :   {icon:'png file'}
+                    }
+
+                    var map_array = [
+                        {pos_lat: 34.848288, pos_lng: 128.425175, title: '2019.09(통영)'},
+                        {pos_lat: 33.470330, pos_lng: 126.917823, title: '2019.06(제주도)'},
+                        {pos_lat: 34.669151, pos_lng: 135.508650, title: '2019.02(오사카)'},
+                        {pos_lat: 36.731477, pos_lng: 127.014398, title: '2018.12(아산)'},
+                        {pos_lat: 37.806021, pos_lng: 127.477467, title: '2018.10(가평)'},
+                        {pos_lat: -43.529633,pos_lng: 172.625263, title: '2018.10(크라이스트 처치)'},
+                        {pos_lat: 33.586931, pos_lng: 130.411340, title: '2018.08(후쿠오카)'},
+                        {pos_lat: 37.173798, pos_lng: 126.625886, title: '2018.06(제부도)'},
+                        {pos_lat: 38.242891, pos_lng: 128.572267, title: '2018.05(속초 바다)'},
+                        {pos_lat: 38.124700, pos_lng: 128.628013, title: '2018.05(낙산사)'},
+                        {pos_lat: 33.377352, pos_lng: 126.249443, title: '2017.09(제주도)'},
+                        {pos_lat: 26.578407, pos_lng: 127.984152, title: '2017.08(오키나와)'},
+                        {pos_lat: 34.668458, pos_lng: 135.487771, title: '2017.05(오사카)'},
+                        {pos_lat: 33.305906, pos_lng: 126.774890, title: '2017.04(제주도)'},
+                        {pos_lat: 35.657995, pos_lng: 139.701638, title: '2017.02(도쿄)'},
+                        {pos_lat: 37.855457, pos_lng: 127.684912, title: '2016.09(물레길)'},
+                        {pos_lat: 36.752507, pos_lng: 127.838064, title: '2016.07(산막이옛길)'},
+                        {pos_lat: 37.553112, pos_lng: 128.058929, title: '2015.10(횡성호)'},
+                        {pos_lat: 35.070908, pos_lng: 127.757954, title: '2015.08(하동역)'},
+                        {pos_lat: 37.731720, pos_lng: 126.948852, title: '2015.05(양주)'},
+                        {pos_lat: 36.010947, pos_lng: 127.029959, title: '2015.05(미륵사지)'},
+                        {pos_lat: 36.287545, pos_lng: 126.911309, title: '2014.08(부소산성)'},
+                        {pos_lat: 35.970238, pos_lng: 126.617193, title: '2014.07(군산항)'},
+                        {pos_lat: 35.815246, pos_lng: 127.153953, title: '2014.05(한옥마을)'},
+                        {pos_lat: 35.402960, pos_lng: 127.379541, title: '2014.05(광한루)'},
+                        {pos_lat: 35.184297, pos_lng: 127.012167, title: '2014.05(소쇄원)'},
+                        {pos_lat: 35.430707, pos_lng: 126.704878, title: '2014.05(고창 읍성)'},
+                        {pos_lat: 36.577063, pos_lng: 128.758405, title: '2014.03(월영교)'},
+                        {pos_lat: 36.856419, pos_lng: 128.015472, title: '2014.01(수안보)'},
+                        {pos_lat: 34.737255, pos_lng: 127.740903, title: '2013.07(이순신 광장)'},
+                        {pos_lat: -36.827215,pos_lng: 174.796719, title: '2010.07(오클랜드)'},
+                        {pos_lat: 37.711302, pos_lng: 128.786002, title: '2009.10(삼양 목장)'}
+                    ]
+
+                    //지금은 일단 집도, 여행지도 다 하나로 표시하고 나중에 추가할때는 바꾸자.
+                    for (var i = 0; i < map_array.length; i++) {
+                        marker = new google.maps.Marker({
+                            position : {
+                                lat : map_array[i].pos_lat,
+                                lng : map_array[i].pos_lng
+                            },
+                            map : map,
+                            icon: 'image/marker/map-marker-pin.png',
+                            title : map_array[i].title.icon
+                        });
+                    }
+
+				}catch (e){
+					console.log("[INFO] Fail to load google api. Map div will be replaced :)");
+					$('#map_me').append('<img src="/resource/img/myweb_019.png" style="width:100%; height:100%"/>');
+				}
+
+
+            }
+            exports.initMap = initMap;
+        })((this.window = this.window || {}));
+    </script>
