@@ -40,6 +40,7 @@ func engine() *gin.Engine {
 	r.Static("dist", "./lib/dist")
 	r.Static("vendors", "./lib/vendors")
 	r.Static("image", "./resource/image")
+	r.Static("audio", "./resource/audio")
 	r.Static("templates", "./templates")
 	r.LoadHTMLGlob("templates/*")
 
